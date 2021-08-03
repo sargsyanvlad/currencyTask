@@ -1,0 +1,39 @@
+{
+  "name": "taskExchange",
+  "version": "1.0.0",
+  "description": "Backend side for taskExchange",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "migrate": "cd db && sequelize db:migrate --config  ../config/database.js",
+    "migrate:undo": "cd db && sequelize db:migrate:undo:all --config  ../config/database.js",
+    "migration": "cd db && sequelize migration:generate --name"
+  },
+  "keywords": [
+    "node",
+    "posgtres",
+    "sequelize"
+  ],
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "express-validation": "^3.0.8",
+    "nodemon": "^2.0.7",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}
